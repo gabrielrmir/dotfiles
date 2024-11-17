@@ -15,6 +15,7 @@ return {
           "clangd",
           "pyright",
           "gopls",
+          "intelephense",
         },
         automatic_installation = true,
       })
@@ -104,6 +105,11 @@ return {
         capabilities = capabilities,
         on_attach = on_attach,
       })
+
+      lspconfig.intelephense.setup {
+        capabilities = capabilities,
+        on_attach = on_attach,
+      }
     end,
   },
 }
