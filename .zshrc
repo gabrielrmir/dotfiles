@@ -1,6 +1,7 @@
 # path
-PATH=$PATH:$HOME/.cargo/bin/
-PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
+PATH="$HOME/.cargo/bin/:$PATH"
+PATH="$(go env GOBIN):$(go env GOPATH)/bin:$PATH"
+PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 export EDITOR="nvim"
 
