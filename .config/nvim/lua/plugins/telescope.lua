@@ -10,6 +10,7 @@ return {
             ["<C-h>"] = "which_key",
           },
         },
+        borderchars = { "─", "│", "─", "│", "*", "*", "*", "*" }
       },
       pickers = {},
       extensions = {},
