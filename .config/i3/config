@@ -186,7 +186,7 @@ default_floating_border pixel 2
 # class                 border  backgr. text    indicator child_border
 client.focused          #7c6f64 #7c6f64 #ebdbb2 #7c6f64   #7c6f64
 client.focused_inactive #504945 #504945 #ffffff #504945   #504945
-client.unfocused        #504945 #504945 #ebdbb2 #504945   #504945
+client.unfocused        #504945 #504945 #ebdbb2 #504945   #00000000
 client.urgent           #2f343a #b8bb26 #282828 #b8bb26   #b8bb26
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
