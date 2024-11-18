@@ -21,5 +21,4 @@ require("lazy").setup({
   change_detection = { notify = false }
 })
 
-vim.o.background = "dark"
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme koehler]])
