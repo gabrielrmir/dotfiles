@@ -17,11 +17,9 @@ return {
 
 
     local builtin = require("telescope.builtin")
-    local notify_ext = require("telescope").extensions.notify.notify
     vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
     vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Grep Files" })
     vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
     vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help Pages" })
-    vim.keymap.set("n", "<leader>fn", notify_ext, { desc = "Notification History" })
   end,
 }
