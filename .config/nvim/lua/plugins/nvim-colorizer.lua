@@ -1,6 +1,11 @@
 return {
-	'NvChad/nvim-colorizer.lua',
-	config = function ()
-		require("colorizer").setup()
-	end,
+  'NvChad/nvim-colorizer.lua',
+  config = function()
+    require("colorizer").setup({
+      user_default_options = {
+        tailwind = "both",
+        always_update = true
+      }
+    })
+  end,
 }

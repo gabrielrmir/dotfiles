@@ -16,6 +16,7 @@ return {
           "pyright",
           "gopls",
           "intelephense",
+          "tailwindcss"
         },
         automatic_installation = true,
       })
@@ -110,6 +111,11 @@ return {
         capabilities = capabilities,
         on_attach = on_attach,
       }
+
+      lspconfig.tailwindcss.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+      })
     end,
   },
 }
