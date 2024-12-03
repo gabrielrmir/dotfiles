@@ -38,3 +38,10 @@ precmd () { vcs_info }
 zstyle ':vcs_info:*' formats ' %F{cyan}%s(%b)%f'
 setopt prompt_subst
 PS1='%F{green}[./%1~]%f${vcs_info_msg_0_} %B%F{blue}>%f%b '
+
+# bun completions
+[ -s "/home/gabriel/.bun/_bun" ] && source "/home/gabriel/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
