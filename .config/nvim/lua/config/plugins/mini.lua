@@ -10,5 +10,7 @@ return {
     vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Previous tab" })
     vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next tab" })
     vim.keymap.set("n", "<leader>bd", "<cmd>bd!<cr>", { desc = "Delete buffer" })
+
+    require('mini.statusline').setup()
   end
 }
