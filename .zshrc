@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # path
 PATH="$HOME/.cargo/bin/:$PATH"
 PATH="$(go env GOBIN):$(go env GOPATH)/bin:$PATH"
@@ -32,12 +39,8 @@ eval "$(zoxide init --cmd cd zsh)"
 
 alias ls="ls --color"
 
-# prompt styling
-autoload -Uz vcs_info
-precmd () { vcs_info }
-zstyle ':vcs_info:*' formats ' %F{cyan}%s(%b)%f'
-setopt prompt_subst
-PS1='%F{green}[./%1~]%f${vcs_info_msg_0_} %B%F{blue}>%f%b '
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
 
 # bun completions
 [ -s "/home/gabriel/.bun/_bun" ] && source "/home/gabriel/.bun/_bun"
@@ -45,3 +48,6 @@ PS1='%F{green}[./%1~]%f${vcs_info_msg_0_} %B%F{blue}>%f%b '
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
