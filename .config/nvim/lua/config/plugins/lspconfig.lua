@@ -61,7 +61,7 @@ return {
         "intelephense",
         "cssls",
         "tailwindcss",
-        "tsserver",
+        "ts_ls",
         "clangd",
         "gopls",
       }
