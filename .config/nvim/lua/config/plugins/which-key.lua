@@ -1,17 +1,16 @@
 return {
-	"folke/which-key.nvim",
-	event = "VeryLazy",
-	init = function()
-		vim.o.timeout = true
-		vim.o.timeoutlen = 300
-	end,
-	opts = {},
-	config = function()
-		local wk = require("which-key")
-		wk.register({
-			f = { name = "+Find" },
-			b = { name = "+Buffer" },
-			x = { name = "+Trouble" },
-		}, { prefix = "<leader>" })
-	end,
+  "folke/which-key.nvim",
+  event = "VeryLazy",
+  opts = {
+    preset = "modern"
+  },
+  config = function(_, opts)
+    local wk = require("which-key")
+    wk.setup(opts)
+    wk.add({
+      { "<leader>f", group = "find" },
+      { "<leader>b", group = "buffer" },
+      { "<leader>x", group = "trouble" },
+    })
+  end,
 }
