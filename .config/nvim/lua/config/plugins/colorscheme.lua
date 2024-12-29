@@ -16,6 +16,8 @@ return {
           set_hl('FloatBorder', palette.none, palette.bg0)
           set_hl('NormalFloat', palette.none, palette.bg0)
 
+          set_hl('TelescopeBorder', palette.none, palette.bg0)
+
           set_hl('MiniTablineCurrent', palette.bg0, palette.green)          -- buffer is current (has cursor in it).
           set_hl('MiniTablineVisible', palette.none, palette.none)          -- buffer is visible (displayed in some window).
           set_hl('MiniTablineHidden', palette.none, palette.none)           -- buffer is hidden (not displayed).

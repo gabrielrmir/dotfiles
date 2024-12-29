@@ -18,7 +18,15 @@ return {
           },
         },
       },
-      pickers = {},
+      pickers = {
+        find_files = { theme = "ivy" },
+        live_grep = { theme = "ivy" },
+        buffers = { theme = "ivy" },
+        help_tags = { theme = "ivy" },
+        highlights = { theme = "ivy" },
+        lsp_references = { theme = "ivy" },
+        lsp_definitions = { theme = "ivy" },
+      },
       extensions = {
         fzf = {}
       },

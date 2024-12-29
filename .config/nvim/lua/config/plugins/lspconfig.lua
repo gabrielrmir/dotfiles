@@ -35,21 +35,28 @@ return {
             vim.opt_local.tagfunc = "v:lua.vim.lsp.tagfunc"
           end
 
-          local opts = { buffer = 0, noremap = true, silent = true }
+          local map = function(mode, lhs, rhs, desc)
+            vim.keymap.set(mode, lhs, rhs, {
+              buffer = 0, noremap = true, silent = true, desc = desc
+            })
+          end
 
-          vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+          local builtin = require('telescope.builtin')
 
-          vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-          vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-          vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-          vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
-          vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-          vim.keymap.set("n", "gh", vim.lsp.buf.signature_help, opts)
+          map("n", "K", vim.lsp.buf.hover, "Hover")
 
-          vim.keymap.set("n", "<space>cr", vim.lsp.buf.rename, opts)
-          vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, opts)
+          map("n", "gd", builtin.lsp_definitions, "LSP Definitions")
+          map("n", "gD", vim.lsp.buf.declaration, "LSP Declarations")
+          map("n", "gi", vim.lsp.buf.implementation, "LSP Implementations")
+          map("n", "gt", vim.lsp.buf.type_definition, "LSP Typedef")
+          map("n", "gr", builtin.lsp_references, "LSP References")
+          map("n", "gh", vim.lsp.buf.signature_help, "Signature Help")
 
-          vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
+          map("n", "<space>cr", vim.lsp.buf.rename, "Rename Symbol")
+          map("n", "<space>ca", vim.lsp.buf.code_action, "Code Action")
+
+          -- map("n", "<space>q", vim.diagnostic.setloclist, "Loclist")
+          map("n", "<space>q", builtin.diagnostics, "Diagnostics")
         end,
       })
 
