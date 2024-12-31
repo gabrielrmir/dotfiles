@@ -38,6 +38,7 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 alias ls="ls --color"
+alias c="nvim"
 
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
