@@ -2,15 +2,14 @@ return {
   "folke/which-key.nvim",
   event = "VeryLazy",
   opts = {
-    preset = "modern"
+    preset = "helix",
   },
   config = function(_, opts)
     local wk = require("which-key")
     wk.setup(opts)
     wk.add({
-      { "<leader>f", group = "find" },
-      { "<leader>b", group = "buffer" },
-      { "<leader>x", group = "trouble" },
+      { "<leader>f", group = "Find" },
+      { "<leader>b", group = "Buffer" },
     })
   end,
 }
