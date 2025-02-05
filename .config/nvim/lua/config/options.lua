@@ -18,12 +18,10 @@ vim.opt.smartcase = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt.cursorline = true
-
 vim.opt.listchars = {
-	space = " ",
-	trail = "•",
-	leadmultispace = ">·",
-	tab = ">·",
+  space = " ",
+  trail = "•",
+  leadmultispace = ">·",
+  tab = ">·",
 }
 vim.opt.list = true
