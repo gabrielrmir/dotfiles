@@ -20,7 +20,18 @@ return {
       local lspconfig = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      require("mason").setup()
+      require("mason").setup({
+        ui = {
+          border = "rounded",
+          width = 0.8,
+          height = 0.9,
+          icons = {
+            package_installed = "◍",
+            package_pending = "◍",
+            package_uninstalled = "◍",
+          },
+        },
+      })
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls" }
       })
