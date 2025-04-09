@@ -4,7 +4,7 @@ return {
   config = function()
     require('mini.tabline').setup({
       set_vim_settings = true,
-      tabpage_section = 'none',
+      tabpage_section = 'right',
     })
 
     vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Previous tab" })
