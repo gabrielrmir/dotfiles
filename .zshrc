@@ -11,6 +11,7 @@ PATH="$(go env GOBIN):$(go env GOPATH)/bin:$PATH"
 PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 export EDITOR="nvim"
+# export MANPAGER='nvim +Man!'
 
 # initialize plugin manager
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -39,9 +40,7 @@ eval "$(zoxide init --cmd cd zsh)"
 
 alias ls="ls --color"
 alias c="nvim"
-
-zinit ice depth=1
-zinit light romkatv/powerlevel10k
+alias e="exit"
 
 # bun completions
 [ -s "/home/gabriel/.bun/_bun" ] && source "/home/gabriel/.bun/_bun"
@@ -50,5 +49,4 @@ zinit light romkatv/powerlevel10k
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(starship init zsh)"
