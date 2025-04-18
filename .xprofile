@@ -1,0 +1,8 @@
+export QT_QPA_PLATFORMTHEME=gtk2
+
+setxkbmap -option caps:escape_shifted_capslock &
+
+feh --bg-scale ~/Wallpapers/village.jpg &
+flameshot &
+/usr/bin/dunst &
+picom &
