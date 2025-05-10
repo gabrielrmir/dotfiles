@@ -36,7 +36,7 @@ case ${chosen} in
     systemctl suspend
     ;;
   $_lock)
-    i3lock-fancy
+    i3lock -i ~/Wallpapers/lock.png --nofork
     ;;
   $_logout)
     i3-msg exit
