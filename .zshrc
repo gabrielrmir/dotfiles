@@ -9,6 +9,7 @@ fi
 PATH="$HOME/.cargo/bin/:$PATH"
 PATH="$(go env GOBIN):$(go env GOPATH)/bin:$PATH"
 PATH="$HOME/.config/composer/vendor/bin:$PATH"
+PATH="$HOME/bin/:$PATH"
 
 export EDITOR="nvim"
 export MANPAGER='nvim +Man!'
@@ -49,4 +50,5 @@ alias e="exit"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-eval "$(starship init zsh)"
+PS1="[%F{yellow}%n%f:%F{blue}%1~%f]%0(#.#.$) "
+PS2="> "

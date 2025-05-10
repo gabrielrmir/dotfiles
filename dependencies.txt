@@ -26,7 +26,6 @@ picom
 polybar
 ripgrep
 rofi
-starship
 stow
 tmux
 zoxide
