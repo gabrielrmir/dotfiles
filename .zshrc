@@ -37,7 +37,7 @@ bindkey '^[w' kill-region
 
 # shell integration
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
 
 alias ls="ls --color"
 alias c="nvim"
