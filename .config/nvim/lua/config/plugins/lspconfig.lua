@@ -33,8 +33,10 @@ return {
         },
       })
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls" }
+        ensure_installed = { "lua_ls" },
       })
+
+      vim.keymap.set("n", "<leader>lm", "<cmd>Mason<cr>")
 
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
@@ -48,11 +50,14 @@ return {
 
           local map = function(mode, lhs, rhs, desc)
             vim.keymap.set(mode, lhs, rhs, {
-              buffer = 0, noremap = true, silent = true, desc = desc
+              buffer = 0,
+              noremap = true,
+              silent = true,
+              desc = desc,
             })
           end
 
-          local builtin = require('telescope.builtin')
+          local builtin = require("telescope.builtin")
 
           map("n", "K", vim.lsp.buf.hover, "Hover")
 
@@ -74,11 +79,8 @@ return {
       local autoconfig_servers = {
         "lua_ls",
         "pyright",
-        "marksman",
-        "html",
         "intelephense",
         "cssls",
-        "tailwindcss",
         "ts_ls",
         "clangd",
         "gopls",
