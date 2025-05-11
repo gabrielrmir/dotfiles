@@ -14,12 +14,12 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   ui = {
     border = "rounded",
-    backdrop = 100
+    backdrop = 100,
   },
   spec = {
-    { import = "config.plugins" }
+    { import = "config.plugins" },
   },
-  change_detection = { notify = false }
+  change_detection = { notify = false },
 })
 
 vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<cr>")

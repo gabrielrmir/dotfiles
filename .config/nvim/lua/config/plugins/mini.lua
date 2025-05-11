@@ -1,16 +1,16 @@
 return {
   "echasnovski/mini.nvim",
-  version = '*',
+  version = "*",
   config = function()
-    require('mini.tabline').setup({
+    require("mini.tabline").setup({
       set_vim_settings = true,
-      tabpage_section = 'right',
+      tabpage_section = "right",
     })
 
     vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Previous tab" })
     vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next tab" })
     vim.keymap.set("n", "<leader>bd", "<cmd>bd!<cr>", { desc = "Delete buffer" })
 
-    require('mini.statusline').setup()
-  end
+    require("mini.statusline").setup()
+  end,
 }
