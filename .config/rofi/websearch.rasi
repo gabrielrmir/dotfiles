@@ -1,0 +1,17 @@
+@theme "gruvbox-dark.rasi"
+
+configuration {
+  dmenu {
+    display-name: " > ";
+  }
+}
+
+window {
+    width: 500px;
+    children: [ inputbar ];
+}
+
+entry {
+  placeholder: "Search...";
+}
+
