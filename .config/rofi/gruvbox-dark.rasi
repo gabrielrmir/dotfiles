@@ -30,6 +30,8 @@
     gruvbox-dark-green-light:  #b8bb26;
     gruvbox-dark-gray:         #a89984;
 
+    spacing: 0;
+
     /* Theme colors */
     background:                  @gruvbox-dark-bg0;
     background-color:            @background;
@@ -42,8 +44,8 @@
     normal-foreground:           @foreground;
     alternate-normal-background: @gruvbox-dark-bg0-soft;
     alternate-normal-foreground: @foreground;
-    selected-normal-background:  @gruvbox-dark-bg3;
-    selected-normal-foreground:  @gruvbox-dark-green-light;
+    selected-normal-background:  @gruvbox-dark-bg4;
+    selected-normal-foreground:  @gruvbox-dark-bg0;
 
     active-background:           @gruvbox-dark-yellow-dark;
     active-foreground:           @background;

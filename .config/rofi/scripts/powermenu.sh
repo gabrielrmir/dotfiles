@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+CHARGE=$(cat /sys/class/power_supply/BAT1/capacity)
 
 _shutdown=" Shutdown"
 _reboot=" Reboot"
@@ -17,7 +18,7 @@ options() {
 
 run_rofi() {
   options | rofi -dmenu \
-    -mesg Powermenu \
+    -mesg "CHARGE: ${CHARGE}%" \
     -theme 'powermenu.rasi'
     # -p Powermenu \
     # -theme-str 'listview {lines: 5; scrollbar: false;}' \
