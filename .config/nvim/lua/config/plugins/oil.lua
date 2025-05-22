@@ -4,6 +4,12 @@ return {
     config = function()
       local oil = require("oil")
       oil.setup({
+        float = {
+          border = "single",
+          padding = 0,
+          max_width = 0.8,
+          max_height = 0.9,
+        },
         keymaps = {
           ["g?"] = { "actions.show_help", mode = "n" },
           ["<CR>"] = "actions.select",

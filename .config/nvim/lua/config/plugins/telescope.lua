@@ -5,22 +5,35 @@ return {
     "nvim-lua/plenary.nvim",
   },
   config = function()
+    local theme = {
+      border = true,
+      borderchars = {
+        preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+        prompt = { "─", " ", " ", " ", "─", "─", " ", " " },
+        results = { " " },
+      },
+      layout_config = {
+        height = 25,
+      },
+      layout_strategy = "bottom_pane",
+      sorting_strategy = "ascending",
+      theme = "ivy",
+    }
+
     require("telescope").setup({
       defaults = {
         mappings = {
-          i = {
-            ["<C-h>"] = "which_key",
-          },
+          i = { ["<C-h>"] = "which_key" },
         },
       },
       pickers = {
-        find_files = { theme = "ivy" },
-        live_grep = { theme = "ivy" },
-        buffers = { theme = "ivy" },
-        help_tags = { theme = "ivy" },
-        highlights = { theme = "ivy" },
-        lsp_references = { theme = "ivy" },
-        lsp_definitions = { theme = "ivy" },
+        find_files = theme,
+        live_grep = theme,
+        buffers = theme,
+        help_tags = theme,
+        highlights = theme,
+        lsp_references = theme,
+        lsp_definitions = theme,
       },
     })
 

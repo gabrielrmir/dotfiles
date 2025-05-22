@@ -22,9 +22,10 @@ return {
 
       require("mason").setup({
         ui = {
-          border = "rounded",
+          border = "single",
           width = 0.8,
           height = 0.9,
+          backdrop = 100,
           icons = {
             package_installed = "◍",
             package_pending = "◍",

@@ -16,4 +16,8 @@ return {
   keys = {
     { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
   },
+  config = function()
+    vim.g.lazygit_floating_window_border_chars = { "", "", "", "", "", "", "", "" }
+    vim.g.lazygit_floating_window_scaling_factor = 1 -- scaling factor for floating window
+  end,
 }
