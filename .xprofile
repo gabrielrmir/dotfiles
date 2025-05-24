@@ -6,6 +6,5 @@ setxkbmap             \
   -option caps:escape &
 
 feh --bg-scale ~/Wallpapers/village.jpg &
-flameshot &
 /usr/bin/dunst &
 picom &
