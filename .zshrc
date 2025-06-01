@@ -28,8 +28,12 @@ zinit cdreplay -q
 bindkey -e
 bindkey '^[w' kill-region
 
+
 # shell integration
+command -v fzf >/dev/null 2>&1 && \
 eval "$(fzf --zsh)"
+
+command -v zoxide >/dev/null 2>&1 && \
 eval "$(zoxide init zsh)"
 
 alias ls="ls --color"
