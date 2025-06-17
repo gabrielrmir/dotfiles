@@ -14,7 +14,9 @@ return {
         javascriptreact = { "prettierd", "prettier" },
         typescriptreact = { "prettierd", "prettier" },
         rust = { "rustfmt" },
+        go = { "gofmt" },
         markdown = { "prettierd", "prettier" },
+        python = { "black" },
       },
     })
 
