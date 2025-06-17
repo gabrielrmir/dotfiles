@@ -1,7 +1,7 @@
 [general]
 
 import = [
-  "~/.config/alacritty/theme.toml"
+  "~/.config/alacritty/themes/gruvbox.toml"
 ]
 
 [font]
