@@ -1,10 +1,7 @@
-/* ==========================================================================
-   File: gruvbox-common.rasi
-   Desc: Shared rules between all gruvbox themes
-   Author: bardisty <b@bah.im>
-   Source: https://github.com/bardisty/gruvbox-rofi
-   Modified: Mon Feb 12 2018 06:06:47 PST -0800
-   ========================================================================== */
+/*
+  Common configuration for rofi
+  Inspired by: https://github.com/bardisty/gruvbox-rofi
+*/
 
 configuration {
   display-drun: " > ";
@@ -26,9 +23,8 @@ mainbox {
   children: [ inputbar, listview ];
 }
 
-
 message {
-  border: 2px;
+  border: 1px;
   width: 100px;
   padding: 16px;
 }
@@ -39,7 +35,7 @@ textbox {
 }
 
 listview {
-  border: 2;
+  border: 1;
   padding:      0;
   background:   @normal-background;
   border-color: @separatorcolor;
@@ -71,7 +67,7 @@ scrollbar {
 }
 
 mode-switcher {
-  border:       2px 0 0;
+  border:       1px 0 0;
   border-color: @separatorcolor;
 }
 
@@ -79,7 +75,7 @@ inputbar {
   spacing:    0;
   text-color: @normal-foreground;
   padding:    16px 4px;
-  border:     2;
+  border:     1px;
   children:   [ prompt, entry ];
 }
 
