@@ -3,10 +3,10 @@
 set -e
 
 FILEPATH=""
-LATESTPATH="${HOME}/screenshots/latest.png"
+LATESTPATH="${HOME}/Pictures/Screenshots/latest.png"
 SOUNDPATH="${HOME}/.config/i3/sound.wav"
 makepath () {
-  FILEPATH="${HOME}/screenshots/$(date +%Y-%m-%d--%H-%M-%S | tr A-Z a-z).png"
+  FILEPATH="${HOME}/Pictures/Screenshots/$(date +%Y-%m-%d--%H-%M-%S | tr A-Z a-z).png"
   echo "${FILEPATH}"
 }
 
