@@ -5,6 +5,7 @@
 
 set $mod      Mod4
 set $browser  firefox
+set $files    pcmanfm
 set $terminal alacritty
 set $launcher rofi -show drun
 
@@ -34,6 +35,7 @@ floating_modifier $mod
 
 bindsym $mod+Return  exec $terminal
 bindsym $mod+b       exec $browser
+bindsym $mod+e       exec $files
 bindsym $mod+d       exec --no-startup-id $launcher
 bindsym $mod+Shift+e exec --no-startup-id "~/.config/rofi/scripts/powermenu.sh"
 bindsym $mod+x       exec --no-startup-id "~/.config/rofi/scripts/websearch.sh"
@@ -133,8 +135,10 @@ mode "resize" {
 
 # styling
 
-default_border normal 2
-default_floating_border normal 2
+default_border pixel 1
+default_floating_border pixel 1
+
+gaps inner 8px
 
 # colors
 
@@ -146,7 +150,10 @@ set $red   #fb4934
 
 focus_on_window_activation none
 
-client.focused          $bg4 $bg4 $fg $bg4 $bg4
+for_window [class="^feh$"] floating enable
+for_window [class="^Pcmanfm$"] floating enable
+
+client.focused          $bg2 $bg2 $fg $bg2 $bg2
 client.focused_inactive $bg2 $bg2 $fg $bg2 $bg2
 client.unfocused        $bg2 $bg2 $fg $bg2 $bg2
 client.urgent           $red $red $bg $red $red
