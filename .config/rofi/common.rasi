@@ -16,15 +16,14 @@ configuration {
 window {
   width: 500px;
   children: [ mainbox ];
+  border: 1px;
 }
 
 mainbox {
-  spacing:    -2px;
   children: [ inputbar, listview ];
 }
 
 message {
-  border: 1px;
   width: 100px;
   padding: 16px;
 }
@@ -32,14 +31,13 @@ message {
 textbox {
   highlight:  @highlight;
   text-color: @foreground;
+  padding: 16px;
 }
 
 listview {
-  border: 1;
   padding:      0;
   background:   @normal-background;
   border-color: @separatorcolor;
-  spacing:      0px;
   scrollbar:    @scrollbar;
   lines: 6;
 }
@@ -72,15 +70,13 @@ mode-switcher {
 }
 
 inputbar {
-  spacing:    0;
   text-color: @normal-foreground;
   padding:    16px 4px;
-  border:     1px;
+  border:     0 0 1px 0;
   children:   [ prompt, entry ];
 }
 
 prompt {
-  spacing:    0;
   text-color: @normal-foreground;
 }
 
@@ -93,7 +89,6 @@ case-indicator,
 entry,
 prompt,
 button {
-  spacing:    0;
   text-color: @normal-foreground;
 }
 

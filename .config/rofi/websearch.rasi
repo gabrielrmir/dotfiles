@@ -16,3 +16,7 @@ entry {
   placeholder: "Search...";
 }
 
+inputbar {
+  border: 0;
+}
+
