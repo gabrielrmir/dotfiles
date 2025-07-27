@@ -47,5 +47,16 @@ alias e="exit"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-PS1="[%F{yellow}%n%f:%F{blue}%1~%f]%0(#.#.$) "
-PS2="> "
+setopt PROMPT_SUBST
+autoload -Uz vcs_info
+
+VCS_STRING=':%F{yellow}%b%f'
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' actionformats ':%F{yellow}%b%f'
+zstyle ':vcs_info:*' formats       ':%F{yellow}%b%f'
+
+precmd () { vcs_info }
+
+PS1='[%F{blue}%1~%f${vcs_info_msg_0_}]%0(#.#.$) '
+PS2='> '
