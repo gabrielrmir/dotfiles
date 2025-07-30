@@ -23,11 +23,6 @@ mainbox {
   children: [ inputbar, listview ];
 }
 
-message {
-  width: 100px;
-  padding: 16px;
-}
-
 textbox {
   highlight:  @highlight;
   text-color: @foreground;

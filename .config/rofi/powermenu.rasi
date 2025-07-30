@@ -10,6 +10,11 @@ mainbox {
   children: [ message, listview ];
 }
 
+message {
+  border: 0 0 1px 0;
+  border-color: @border-color;
+}
+
 listview {
   scrollbar: false;
   lines: 5;

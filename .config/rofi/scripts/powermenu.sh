@@ -18,11 +18,8 @@ options() {
 
 run_rofi() {
   options | rofi -dmenu \
-    -mesg "CHARGE: ${CHARGE}%" \
-    -theme 'powermenu.rasi'
-    # -p Powermenu \
-    # -theme-str 'listview {lines: 5; scrollbar: false;}' \
-    # -theme-str 'window { width: 200px; }'
+    -theme 'powermenu.rasi' \
+    -mesg "CHARGE: ${CHARGE}%"
 }
 
 chosen="$(run_rofi)"
